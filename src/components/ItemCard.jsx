@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom"
+
 const ItemCard = ({
+    id,
     status,
     title,
     description,
@@ -9,7 +12,7 @@ const ItemCard = ({
     imageUrl,
 }) => {
     return (
-        <div className="item-card">
+        <Link to ={"item/" + id} className="item-card">
             <img src={imageUrl} class="item-image" />
             <div class="item-content">
                 <span class="status-badge status-active">{status}</span>
@@ -28,7 +31,7 @@ const ItemCard = ({
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 
